@@ -45,6 +45,12 @@ defmodule SlideSplittingSplit do
     assertCount(code, 5)
   end
 
+  test "> in first line" do
+    assertCount(">a:b", 1)
+    assertCount(">a:b\n>c:d", 2)
+    assertCount(">a:b\n>c:d\n>e:f", 3)
+  end
+
   defp assertCount(code, expected) do
     assert Enum.count(Preslang.parse(code)) == expected
   end
