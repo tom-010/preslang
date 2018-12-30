@@ -1,18 +1,11 @@
 defmodule Preslang do
-  @moduledoc """
-  Documentation for Preslang.
-  """
+  def parse(nil) do
+    []
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Preslang.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def parse(code) do
+    code
+    |> String.split("\n>")
+    |> Enum.filter(&(String.length(&1) > 0))
   end
 end
