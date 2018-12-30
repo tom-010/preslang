@@ -38,11 +38,11 @@ defmodule Preslang do
 
   def format_type(type) do
     type
+    |> String.replace(~r/\(.*\)/, "")
     |> String.trim()
     |> String.downcase()
     |> String.replace("  ", " ")
     |> String.replace(~r/ +/, "-")
-    |> String.replace(~r/\(.*\)/, "")
   end
 
   def format_content(content) do

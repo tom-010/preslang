@@ -29,4 +29,8 @@ defmodule TypeFormattingTest do
     assert Preslang.format_type("THiS    Is   A normal   Sentence        ") ==
              "this-is-a-normal-sentence"
   end
+
+  test "spaces between name and attributes" do
+    assert Preslang.format_type("type ()") == "type"
+  end
 end
