@@ -1,27 +1,30 @@
 <%
 defmodule Slides do 
 
+  def render_slide(idx, slide) do 
+    classes = Enum.join(slide.attributes, " ")
+    """
+    <div class="step slide #{classes}" data-y="0" data-x="#{idx * 1000}">
+      #{render(idx, slide)}
+    </div>
+    """
+  end
+
   def render(idx, %{type: "chapter"} = slide) do
     """
-    <div class="step slide" data-y="0" data-x="#{idx * 1000}">
-        <h1>Chapter: #{slide.content}</h1>
-    </div>
+    <h1>Chapter: #{slide.content}</h1>
     """
   end
 
   def render(idx, %{type: "notes"} = slide) do
     """
-    <div class="step slide" data-y="0" data-x="#{idx * 1000}">
-        <i>Notes: #{slide.content}</i>
-    </div>
+    <i>Notes: #{slide.content}</i>
     """
   end
 
   def render(idx, slide) do
     """
-    <div class="step slide" data-y="0" data-x="#{idx * 1000}">
-        <q>#{slide.content}</q>
-    </div>
+    <q>#{slide.content}</q>
     """
   end
 end
@@ -30,15 +33,15 @@ end
 <html>
   <head>
     <link rel="stylesheet" href="impress.css">
+    <style>
+      .tom { background-color: red !important; }
+    </style>
   </head>
   <body>
     <div id="impress">
-      <%= for {slide, idx} <- Enum.with_index(slides), do: Slides.render(idx, slide) %>
+      <%= for {slide, idx} <- Enum.with_index(slides), do: Slides.render_slide(idx, slide) %>
     </div>
-
     <script src="impress.js"></script>
-    <script>
-    impress().init(); 
-    </script>
+    <script>impress().init()</script>
   </body>
 </html>
