@@ -6,14 +6,14 @@ defmodule TypeSplittingTest do
   end
 
   test "type given: the first element is the type, the second the rest" do
-    assert Preslang.split_type("type:content") == ["type", "content"]
+    assert PreslangParser.split_type("type:content") == ["type", "content"]
   end
 
   test "two : given, it is not splitted by second" do
-    assert Preslang.split_type("type:content1:content2") == ["type", "content1", "content2"]
+    assert PreslangParser.split_type("type:content1:content2") == ["type", "content1", "content2"]
   end
 
   defp assertPartsCount(slide, expected) do
-    assert Enum.count(Preslang.split_type(slide)) == expected
+    assert Enum.count(PreslangParser.split_type(slide)) == expected
   end
 end

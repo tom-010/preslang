@@ -21,7 +21,7 @@ defmodule E2ETests do
     > even_this is a   type (some   wired attrs, and-here-it is): with < > some >>    content
     """
 
-    assert Preslang.parse(code) == [
+    assert PreslangParser.parse(code) == [
              %{
                attributes: ["main", "title"],
                content: "This is <i>the</i> title of the Chapter\n",

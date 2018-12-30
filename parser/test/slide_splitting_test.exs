@@ -2,11 +2,11 @@ defmodule SlideSplittingSplit do
   use ExUnit.Case
 
   test "empty string is no slide" do
-    assert Preslang.parse("") == []
+    assert PreslangParser.parse("") == []
   end
 
   test "nil is no slide" do
-    assert Preslang.parse(nil) == []
+    assert PreslangParser.parse(nil) == []
   end
 
   test "> on first line is one slide" do
@@ -52,6 +52,6 @@ defmodule SlideSplittingSplit do
   end
 
   defp assertCount(code, expected) do
-    assert Enum.count(Preslang.parse(code)) == expected
+    assert Enum.count(PreslangParser.parse(code)) == expected
   end
 end

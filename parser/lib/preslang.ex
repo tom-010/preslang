@@ -1,4 +1,4 @@
-defmodule Preslang do
+defmodule PreslangParser do
   def parse(nil) do
     []
   end
