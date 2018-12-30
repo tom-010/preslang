@@ -1,1 +1,20 @@
-<h3>Foo: <%= foo %></h3>
+<html>
+  <head>
+    <link rel="stylesheet" href="impress.css">
+  </head>
+  <body>
+    <div id="impress">
+
+      <%= for {slide, idx} <- Enum.with_index(slides) do %>
+        <div class="step slide" data-y="0" data-x="<%= idx * 1000 %>">
+              <q><%= slide.content %></q>
+          </div>
+      <%= end %>
+    </div>
+
+    <script src="impress.js"></script>
+    <script>
+    impress().init(); 
+    </script>
+  </body>
+</html>

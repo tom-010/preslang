@@ -1,0 +1,15 @@
+>Chapter(main, title): This is <i>the</i> title of the Chapter
+
+>Notes(important): Some notes to the prev chapter 
+>Slide: 
+  * <b>Point 1</b>
+  * Point 2
+  * Point 3
+>Slide: One-Liner, with <html></html>
+>Slide: Html-Slide
+  <ul>
+    <li>One</li>
+    <li>Two</li>
+  </ul>
+    >this is not a type
+> even_this is a   type (some   wired attrs, and-here-it is): with < > some >>    content

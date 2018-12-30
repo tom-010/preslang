@@ -2,7 +2,10 @@ defmodule ImpressTest do
   use ExUnit.Case
   doctest Impress
 
-  test "greets the world" do
-    assert Impress.hello() == :world
+  test "main" do
+    File.write!(
+      "out/presentation.html",
+      Impress.create("example.pres", "templates/impress.html.eex")
+    )
   end
 end
