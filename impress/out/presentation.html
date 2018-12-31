@@ -4,50 +4,52 @@
   <head>
     <link rel="stylesheet" href="impress.css">
     <style>
-      .tom { background-color: red !important; }
+      .chapter { background-color: #222 !important; color: orange; }
+      .chapter h1 { font-size: 1.5em; padding-bottom: 20px; }
+      .notes { background-color: lightblue; }
     </style>
   </head>
   <body>
     <div id="impress">
-      <div class="step slide tom" data-y="0" data-x="0">
+      <div class="step slide  chapter" data-y="0" data-x="0">
   <h1>Chapter: This is <i>the</i> title of the Chapter
 </h1>
 
 </div>
-<div class="step slide important" data-y="0" data-x="1000">
+<div class="step slide  notes" data-y="0" data-x="1000">
   <i>Notes: Some notes to the prev chapter </i>
 
 </div>
-<div class="step slide " data-y="0" data-x="2000">
+<div class="step slide important slide" data-y="0" data-x="2000">
   <q>
-  * <b>Point 1</b>
-  * Point 2
-  * Point 3</q>
+  <h1>Some important point</h1>
+  <ul>
+  <li><b>Point 1</b></li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+  </ul></q>
 
 </div>
-<div class="step slide " data-y="0" data-x="3000">
-  <q>One-Liner, with <html></html></q>
+<div class="step slide  slide" data-y="0" data-x="3000">
+  <q>One-Liner, with <html>HTML</html></q>
 
 </div>
-<div class="step slide " data-y="0" data-x="4000">
+<div class="step slide  slide" data-y="0" data-x="4000">
   <q>Html-Slide
   <ul>
-    <li>One</li>
+    <li>One</li> 
     <li>Two</li>
   </ul>
     >this is not a type</q>
 
 </div>
-<div class="step slide some-wired-attrs and-here-it-is" data-y="0" data-x="5000">
+<div class="step slide some-wired-attrs and-here-it-is even_this-is-a-type" data-y="0" data-x="5000">
   <q>with < > some >>    content</q>
 
 </div>
 
     </div>
-
     <script src="impress.js"></script>
-    <script>
-    impress().init(); 
-    </script>
+    <script>impress().init()</script>
   </body>
 </html>

@@ -1,14 +1,17 @@
->Chapter(tom): This is <i>the</i> title of the Chapter
+>Chapter: This is <i>the</i> title of the Chapter
 
->Notes(important): Some notes to the prev chapter 
->Slide: 
-  * <b>Point 1</b>
-  * Point 2
-  * Point 3
->Slide: One-Liner, with <html></html>
+>Notes: Some notes to the prev chapter 
+>Slide(important): 
+  <h1>Some important point</h1>
+  <ul>
+  <li><b>Point 1</b></li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+  </ul>
+>Slide: One-Liner, with <html>HTML</html>
 >Slide: Html-Slide
   <ul>
-    <li>One</li>
+    <li>One</li> 
     <li>Two</li>
   </ul>
     >this is not a type

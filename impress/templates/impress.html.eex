@@ -4,25 +4,25 @@ defmodule Slides do
   def render_slide(idx, slide) do 
     classes = Enum.join(slide.attributes, " ")
     """
-    <div class="step slide #{classes}" data-y="0" data-x="#{idx * 1000}">
+    <div class="step slide #{classes} #{slide.type}" data-y="0" data-x="#{idx * 1000}">
       #{render(idx, slide)}
     </div>
     """
   end
 
-  def render(idx, %{type: "chapter"} = slide) do
+  def render(_idx, %{type: "chapter"} = slide) do
     """
     <h1>Chapter: #{slide.content}</h1>
     """
   end
 
-  def render(idx, %{type: "notes"} = slide) do
+  def render(_idx, %{type: "notes"} = slide) do
     """
     <i>Notes: #{slide.content}</i>
     """
   end
 
-  def render(idx, slide) do
+  def render(_idx, slide) do
     """
     <q>#{slide.content}</q>
     """
@@ -34,7 +34,9 @@ end
   <head>
     <link rel="stylesheet" href="impress.css">
     <style>
-      .tom { background-color: red !important; }
+      .chapter { background-color: #222 !important; color: orange; }
+      .chapter h1 { font-size: 1.5em; padding-bottom: 20px; }
+      .notes { background-color: lightblue; }
     </style>
   </head>
   <body>
