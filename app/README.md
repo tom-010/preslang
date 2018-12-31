@@ -1,21 +1,15 @@
-# App
+App
+===
 
-**TODO: Add description**
+This component contains the actual main-method. You can build the impress-application with:
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `app` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:app, "~> 0.1.0"}
-  ]
-end
+```
+mix escript.build
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/app](https://hexdocs.pm/app).
+This command outputs a binary called 'app.' This binary takes two arguments.
 
+1. The pres-file with the description of the presentation
+2. The template, which is a 'eex'-file. 
+
+Running the application, it outputs to stdout, which you can redirect into a 'HTML'-File. Note: The files impress.js and impress.css have to be in the same directory as the redirected HTML-file!

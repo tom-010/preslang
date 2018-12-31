@@ -1,5 +1,5 @@
 while true
 do
     inotifywait -r -e modify .
-    ./build.sh
+    ./build_presentation.sh
 done
