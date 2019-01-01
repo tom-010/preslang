@@ -19,7 +19,8 @@ defmodule Impress.MixProject do
 
   defp deps do
     [
-      {:preslang_parser, [path: "../parser"]}
+      {:preslang_parser, [path: "../parser"]},
+      {:earmark, ">1.3.0"}
     ]
   end
 end
