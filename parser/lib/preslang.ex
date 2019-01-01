@@ -25,7 +25,7 @@ defmodule PreslangParser do
   end
 
   def split_type(slide) do
-    String.split(slide, ":")
+    String.split(slide, ":", parts: 2)
   end
 
   def construct_type(type_as_arr) do

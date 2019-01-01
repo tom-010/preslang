@@ -1,18 +1,23 @@
->Chapter: This is <i>the</i> title of the Chapter
+>Chapter: This is *the* title of the Chapter
 
 >Notes: Some notes to the prev chapter 
+
 >Slide(important): 
-  <h1>Some important point</h1>
-  <ul>
-  <li><b>Point 1</b></li>
-  <li>Point 2</li>
-  <li>Point 3</li>
-  </ul>
+
+# This is a test
+
+* [List](http://www.google.com)
+
+* URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or <http://www.example.com> and sometimes 
+example.com (but not on Github, for example).
+
+
 >Slide: One-Liner, with <html>HTML</html>
 >Slide: Html-Slide
-  <ul>
-    <li>One</li> 
-    <li>Two</li>
-  </ul>
-    >this is not a type
+  * Top
+  * Top
+    - Second
+    - Second
+
 > even_this is a   type (some   wired attrs, and-here-it is): with < > some >>    content
